@@ -53,10 +53,10 @@ def upload_file():
             content = f.read()
             k = key_gen()
             e_data = encryp(content, k)
-            with open(os.path.join(r"C:\Users\...",filename), 'w') as w:     #Path of location to store encrypted data
+            with open(os.path.join(r"C:\Users\...",filename), 'w') as w:            #Path of location to store encrypted data
                 w.write(e_data)
 
-            msg = Message('Decryption key', sender=' ', recipients=[email])  #Senders mail id
+            msg = Message('Decryption key', sender=' ', recipients=[email])         #Senders mail id
             msg.html = "<b>Your decryption key:  <b>" + k.decode()
             mail.send(msg)
 
@@ -80,7 +80,7 @@ def upload_key():
             dec_content = f.read()
             k = request.form['key']
             data = decryp(dec_content, k)
-            with open(os.path.join(r"C:\Users\....",filename), 'w') as w:    #Path of location to store decrypted data
+            with open(os.path.join(r"C:\Users\....",filename), 'w') as w:           #Path of location to store decrypted data
                 w.write(data)
             return render_template('restored.html')
         else:
