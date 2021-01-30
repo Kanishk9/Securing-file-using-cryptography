@@ -1,5 +1,5 @@
 # Minor-1
-A web application, build using Flask framework for Secure file storage using crytography
+A web application, build using Flask framework for Secure file storage using cryptography where AES 128-bit cryptography algorithm is implemented using cryptography.fernet module.
 
 To run the webapp, run Main.py and then go to the localhost (127.0.0.1:5500)
 
